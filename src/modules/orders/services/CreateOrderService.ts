@@ -71,7 +71,7 @@ class CreateOrderService {
       quantity: products[product_index].quantity,
     }));
 
-    // const upd = await this.productsRepository.updateQuantity(products);
+    await this.productsRepository.updateQuantity(products);
 
     const order = await this.ordersRepository.create({
       customer: { ...customer },
